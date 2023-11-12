@@ -1,0 +1,217 @@
+/* general*/
+*{
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0;
+}
+body{
+    /* background-color: rgb(36, 36, 36);  */
+    /* background-color: #253453;   */
+    background-color: #161e38;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*color:  #ad9b84; */
+    /* color: #FCD9AC;  */
+	color: #BDE7FF;
+    font-size: 12px;
+	line-height: 1.5;
+}
+ul{ list-style-type: none; }
+a { color: antiquewhite; text-decoration: none; font-weight: bold;/*font-style: italic;*/}
+a:visited{color: rgb(250, 235, 215);}
+a:active{color: rgb(221, 208, 191);}
+a:hover{background-color: rgba(71, 119, 82, 0.5);}
+table, td{  border: 0;  padding: 0; border-collapse: collapse;}
+td{vertical-align: top;}
+
+
+/* =========================== */
+/* ======= table header ====== */
+.nav-overlap{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+.nav-banner{
+    height: 60px;
+    display: table-cell;
+}
+.nav-list{
+    background-image: url("./images/menu/brown_bg.png");
+    background-size: contain;
+    position: absolute;
+    padding: 0;
+    width: 120px;
+    display: none;
+    border-color: black;
+    border-width: 0;
+    border-style: solid;
+    z-index: 3;
+    margin: 0;
+}
+.nav-bg-green{
+    width: 120px;
+    background-image: url("./images/menu/green_bg.png");
+    background-repeat: repeat;
+    position: relative;
+    width: 120px;
+}
+.nav-bg-blue{
+    width: 120px;
+    background-image: url("./images/menu/blue_bg.png");
+    background-repeat: repeat;
+    position: relative;
+    width: 120px;
+}
+.nav-spacing{
+    padding: 5px;
+    /*display: grid;
+    justify-content: center;*/
+}
+
+.nav-hdr{
+    /*width: 600px; */
+    /* height: 70px; */
+    vertical-align: top;
+    display: flex;
+    padding: 5px;
+    /*justify-self: center;*/
+}
+
+.nav-hdr > div{
+    background-image: url("./images/menu/green_bg.png");
+    background-repeat: repeat;
+    position: relative;
+    width: 120px; height: 30px;
+}
+.float-clear{
+    clear: both;
+}
+
+.nav-hdr > div > div{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    text-align: center;
+    height: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    color: antiquewhite;
+    font-size: 22px;
+    overflow: hidden;
+    width: 120px;
+    text-shadow: -1px 1px black;
+}
+.nav-hdr > div + a{
+    display: block;
+}
+/* menu grill (overlap) */
+.nav-hdr > div > a > img{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 35px;
+}
+.nav-hdr li{
+    display: block;
+    padding: 0;
+    position: relative;
+    border-color: black;
+    border: 0;
+    border-style: solid;
+}
+
+.nav-hdr > div > ul > li > a{
+    padding: 6px;
+    display: block;
+    text-decoration: none;
+    color: antiquewhite;
+	font-weight: unset;
+    font-style: unset;
+}
+
+.nav-hdr > div:hover .nav-list{
+    display: block;
+}
+/* grill bg hover color*/
+.nav-hdr > div:hover div{
+    background-color: rgb(54, 77, 54);
+}
+
+/* =========================== */
+/* ======= mid section ======= */
+
+.midsection {
+	padding: 10px 20px;
+	background-color: #253453;
+}
+
+/* =========================== */
+/* ======= group cell ======== */
+.groupcell{
+    border: 5px solid black;
+    display: inline-flex;
+    padding: 2px;
+    margin: 2px;
+	vertical-align: top;
+}
+.groupcell > p{
+    margin: 2px;
+}
+
+/* =========================== */
+/* ======= image cell ======== */
+.imgcell{
+	/*display: flex; contents;*/
+	display: block;
+	background-color: #235323;
+    margin: 2px;
+    border: 1px solid black;
+	width: 152px;
+    height: 152px;
+}
+.imgcell > img:hover{
+	cursor: pointer;
+	opacity: 0.5;
+
+    /*fill: rgba(71, 119, 82, 0.5);*/
+}
+
+/* =========================== */
+/* ======== text cell ======== */
+.textcell{
+    display: inline-block;
+    margin: 2px;
+}
+
+/* =========================== */
+/* ========= footer ========== */
+footer{
+	padding: 10px 20px;
+}
+
+.footersection{
+    border: 0 black solid;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+	body{
+		font-size: 16px;
+	}
+	.nav-hdr {
+		display: block;
+	}
+	.nav-hdr > div:hover .nav-list{
+		display: inline-block ;
+		position: absolute;
+		left: 120px;
+		top: 0;
+	}
+	.groupcell{
+		display: block;
+	}
+}
