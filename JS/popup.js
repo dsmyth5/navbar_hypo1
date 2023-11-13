@@ -7,10 +7,10 @@ note: copied from my website
 */
 
 /* 
-===============================
-	create global varables that
- 	functions can access
-===============================
+======================================
+	create global varables to elements
+	that functions can access
+======================================
 */
 var v_modal = null, v_bgImage = null;
 
@@ -45,7 +45,7 @@ function fn_imageOnClick(srcElement)
 */
 window.onload = function(){
 	// setup modal elements
-	var v_body = document.getElementsByTagName("body")[0];
+	let v_body = document.getElementsByTagName("body")[0];
 
 	if (v_body != undefined)
 	{
